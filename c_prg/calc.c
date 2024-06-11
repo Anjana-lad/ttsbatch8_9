@@ -7,7 +7,7 @@ int sum(int a,int b){
     int res;
     printf("Enter number:");
     scanf("%d %d",&a,&b);
-    res=a+b;
+    res=a+b; 
     show(a,'+',b,res);
 }
 int sub(int a,int b){
