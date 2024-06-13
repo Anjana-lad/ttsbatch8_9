@@ -83,7 +83,7 @@
 // - - - - *
 
 // task 13:
-//      *
+//       *
 //      * *
 //     * * *
 //    * * * *
@@ -103,3 +103,7 @@
 //1. write a user defined function to print the multiplication table of the given number.
 //2. WAP to find max of 3 numbers using ternary operator and function.
 //3. WAP using function to swap 2 numbers without using 3rd variable.
+
+// task 15:
+//1. WAP to find weather the number is palindrome or not using function.
+//2. 
