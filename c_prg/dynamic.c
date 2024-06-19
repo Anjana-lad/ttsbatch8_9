@@ -10,4 +10,8 @@ int main(){
     for(i=0;i<5;i++){
         printf("arr[%d]=%d\n ",i,arr[i]);
     }
+    printf("\n square of each elements:");
+    for(i=0;i<5;i++){
+        printf("arr[%d]=%d\n",i,arr[i]*arr[i]);
+    }
 }

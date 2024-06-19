@@ -106,4 +106,12 @@
 
 // task 15:
 //1. WAP to find weather the number is palindrome or not using function.
-//2. 
+
+//task 16:
+//1.WAP to read n number of values in an array and display them in reverse order.
+//ex: 2,5,7 o/p: 7,5,2;
+
+//2. WAP to find the sum of all elements of the array.
+//ex: 2,3,5 o/p:10
+
+//3.                                                                                                                                                                                                                                                                                   
