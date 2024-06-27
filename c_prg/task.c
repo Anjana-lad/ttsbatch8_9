@@ -114,4 +114,4 @@
 //2. WAP to find the sum of all elements of the array.
 //ex: 2,3,5 o/p:10
 
-//3.                                                                                                                                                                                                                                                                                   
+//vbhkn
