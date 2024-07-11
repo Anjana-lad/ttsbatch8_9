@@ -1,0 +1,27 @@
+oops concepts:class,object
+class :
+It is specified as a blueprint that describe the behaviors/states for an object.
+Its is user defined datatype.
+class consist of data members and members function, which can be accessed depending on the access specifier.the object of the class hold separate copies of data members. 
+Its is possible to create as many objects of a class  as required.
+syntax:
+class className{
+    access modifier:
+    data member;
+    access modifier:
+    member function(){
+        body of function.
+    }
+};
+Object:                                                             
+An Object can be defined as an entity that has a state and behavior, or in other words, anything that exists physically in the world is called an object. It can represent a dog, a person, a table, etc. An object means a combination of data and programs, which further represent an entity.
+syntax: 
+className object _name;
+
+
+In this we can protect our data by using access specifier/modifier.
+
+3 types they are:-
+1.public: you can used public data any where in the program.
+2.private: you can't the data directly in other class or function for that you need get and set function to use it
+3.protected :it can be used in the child class only.

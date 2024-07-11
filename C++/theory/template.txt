@@ -1,0 +1,46 @@
+Template: 
+It is similar to a blueprint that creates a generic class or a function that reduces code 
+duplication and includes independent writing of a code of any particular type.
+syntax:
+template<parameter list><declaration
+
+2 types of template
+1. function template.
+2. Class template.
+
+File Handling:
+   A collection of characters,text,programs or a set of related data is called a file.
+A file can be in any form. It can be a stream,which represents a sequences of bytes that flow inside /outside the program to carry out input/output operations in c++.
+a set of classes defines the file handling methods in the file i/o system in c++.all this functions are stored in <fstream.h> header file.
+file handling function in c++:
+open();
+close();
+get();
+put();
+read();
+write();
+syntax:
+open a file 
+    file_stream object_file;
+    object_file.open("path\filename.txt");
+close a file:
+    stream_object.close();  eg:ofile.close();    
+    
+Exception handling:
+An exception is a situation where a program produces an unexpected error during the execution
+of the program.
+Exception handling is a technique that separates error handling code from the main code of the program and thereby makes it easier for the user to read and write the code. it transfers the control from one point of a program to another.
+
+c++ uses following 3 keywords to handle exceptions:
+1.try : It is a block of program code where exception is detected. as soon as the exception is detected ,try transfers the program control to catch block by throwing the exception.
+2.catch : It determines the type of exception and provides a block of code which will execute when an exception is thrown. there can be multiple catch block in a program depending upon the type of exception raised. catch is responsible for taking corrective actions  for exception.
+3.throw: It is used to throw an exception when a problem occurs and can be called from anywhere in a program. the point where throw is executed is referred to as throw point.
+
+syntax:
+try{
+    //code
+    throw
+}
+catch (exception name excp 1){
+    catch block
+}

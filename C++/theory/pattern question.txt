@@ -1,0 +1,22 @@
+pattern 1:-
+* * * * * 
+*       *
+*       *
+*       *
+* * * * *
+pattern 2:-
+* * * * *
+  *     * 
+   *    *
+    *   *
+      * *
+        *
+pattern 3:-
+        
+       *
+    *    *
+   *      * 
+  *        *
+*  *  *  *  *                
+
+write a program to compare 2 string without using string function.

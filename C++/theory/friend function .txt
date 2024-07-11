@@ -1,0 +1,14 @@
+Friend Function:
+A special function that can access the private member of a class as if it is a
+friend of that class called as friend function.
+A keyword friend is appended before the name of the function to specify the complier that it is a special function or a friend of that class.
+It can be declared in any access mode.
+It can be defined inside or outside the class.
+Scope resolution operator is not used while defining it outside the class because it is not a member function.
+it can access private data member by using the object name and a member access operator(dot or arrow operator).
+
+Syntax:
+friend return type function_name(parameters)
+{
+    //body of function;
+}

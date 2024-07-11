@@ -1,0 +1,42 @@
+Encapsulation:
+It is the process of binding together the data member and member functions that manipulate the data,thereby keeping the members safe from outside misuse.
+It is the process of hiding the data and functions into a single unit and protecting it from the outside world.
+It provides the concepts of data hiding.
+features:
+1. Whenever the implementations of the class changes,the interface remains the same.
+2. It reduces human errors.
+3. It provides the security to data.
+
+The main benefit of using Encapsulation is to keep data secure from other methods. if we make the data private,then the data can be used within a class ,but not accessible outside the class.
+
+Abstraction:
+It refers to representing the required information to the outside world without presenting the background details,i e.:hiding the details of an object and showing only the essential information that a user can understand.
+Data abstraction is a programming technique that relies on the separation of interface and implementation.
+
+Inheritance:-
+It is used to define a new class from an existing class thereby making it easier to create and maintain a software application. It provides an opportunity to reuse the code functionality(ie. a way to reuse once written code again and again) and help in reducing the code size and ensuring faster implementation.
+
+Types of Inheritance:-
+1. Single Inheritance.
+2. Multiple Inheritance.
+3. Multilevel Inheritance.
+4. Hierarchical Inheritance.
+5. Hybrid Inheritance.(virtual Inheritance).
+-> virtual base class and diamond problem.
+
+Polymorphism:-
+It is the combination of the words poly which means many and morph which means forms .in short many forms.
+the ability to take more then one form is referred to as Polymorphism.
+Polymorphism is the capability of using an operator or a function in different ways.
+A single function or an operator can function in many ways on different instances depending upon the usage.
+// The operator which  cant be overloaded:
+// 1: typeid,
+// 2: ::(scope resolution operator),
+// 3: . (dot) ,*
+// 4: sizeof() ,
+// 5: ?:
+//function overloading :funtion names are same but parameter are different,or datatype can be different
+//operator overloading:it gives special meaning to an existing operator without changing its original meaning. +,++,--,<,>,
+//syntax return type operator (operator symbol)(classname &objectname)
+function overriding:=(run time polymorphism)
+Function overriding is a type of polymorphism in which we redefine the member function of a class which it inherited from its base class. 

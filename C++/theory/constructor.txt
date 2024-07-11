@@ -1,0 +1,31 @@
+Constructor:
+It is a special member function of a class which is executed whenever we create new objects of that class.it contains exact same name as the class and it does not have any return type.
+
+Features of constructor:
+1. a constructor is called immediately after object creation.
+2. it has same name as class name.
+3. it does not return any value.
+4. a constructor is called only once during the lifetime of an object.
+
+Use of it:
+it is use to initialize data member of an object with user-defined values in place of default values.
+
+Types of constructor:
+1.Default constructor
+2.Parameterized constructor
+3.Copy constructor
+
+Constructor overloaded:
+Overloaded constructors will have the same name(name of class),but different number of arguments/parameter.
+
+Destructor:
+A destructor works opposite to a constructor.
+It is executed whenever an object of its class goes out of scope. 
+When we create an object , a particular memory is allocated to it .
+If we not destroy that object ,the memory will remain occupied by the unused object.
+Destructor performs this task by releasing the memory occupied by an unset object.
+Destructor name should be exactly the same as the name of the class ,but it is precede by the tiled sign(~).
+Destructor doesn't have any return type.
+It does not take any parameter.
+Destructor cannot be overloaded.
+It frees the memory of an object whenever it goes out of scope.

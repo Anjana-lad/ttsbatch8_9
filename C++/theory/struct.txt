@@ -1,0 +1,14 @@
+difference between structure and union:
+
+
+Structure:-	
+To define a structure,we use "struct" keyword	.
+Every member has their own memory place	.
+A change in one data member’s value has an impact on the value of other data members.
+The overall size of a structure is the sum of all the sizes of all data members.
+
+Union:-
+To define a union ,we use "union" keyword.
+Memory location is shared by all data members.
+A change in the value of one data member has no effect on the structure’s other data members.
+The biggest data member determines the total size of a union.
