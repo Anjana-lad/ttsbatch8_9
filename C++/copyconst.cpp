@@ -25,4 +25,3 @@ int main(){
   Values v2=v1;  // object for copy constructor
   v2.show();  
 }
-
