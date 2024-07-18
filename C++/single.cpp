@@ -34,7 +34,7 @@ class employee:public person{  //child/derived class
 
     }
     int show_emp(){
-         show();        
+        ``````````````````````` show();        
         cout<<"Age="<<age<<endl;
         cout<<"Gender="<<gender<<endl;
     }
