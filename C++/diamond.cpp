@@ -53,7 +53,7 @@ class D: public B,public C{
          total=a+b+c;
     }
     int result(){
-        showa(); 
+        showa();    
     showb();
     showc();
        

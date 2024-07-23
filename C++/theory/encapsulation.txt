@@ -35,7 +35,7 @@ A single function or an operator can function in many ways on different instance
 // 3: . (dot) ,*
 // 4: sizeof() ,
 // 5: ?:
-//function overloading :funtion names are same but parameter are different,or datatype can be different
+//function overloading :function names are same but parameter are different,or datatype can be different
 //operator overloading:it gives special meaning to an existing operator without changing its original meaning. +,++,--,<,>,
 //syntax return type operator (operator symbol)(classname &objectname)
 function overriding:=(run time polymorphism)
