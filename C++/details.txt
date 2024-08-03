@@ -1,0 +1,3 @@
+Rollno=105
+Name=riya
+Marks=85.3
