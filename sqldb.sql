@@ -47,9 +47,41 @@ select * from emp_details order by city asc;
 select * from emp_details order by salary desc;
 
 -- and or not 
-select * from emp_details where not salary<=30000 and city="surat" ;
+select * from emp_details where salary>=30000 and city="surat" ;
 select * from emp_details where joint_dt >"2006-02-01";
 
--- in 
+-- backup import /export database
+-- C:\WINDOWS\system32>mysqldump -u root -p batch8_10 >G:\ttsbatch8_9\backup.sql
+-- Enter password: ****
 
+-- C:\WINDOWS\system32>mysql -u root -p ttsbatch8_9 <G:\ttsbatch8_9\backup.sql
+-- Enter password: ****
+-- group by
 
+-- inner join:
+-- syntax:
+-- select column_name from table1(primary key) inner join table2(foreign key) where table1.primary key col =table2.foreign key col;
+select stname,marks,course_name from student inner join course where student.rollno=course.rollno;
+
+-- left join
+-- syntax: select column_name from table1(PK) left join table2(FK) where table1.col=table2.col;
+select stname,marks,course_name from student left join course on student.rollno=course.rollno;
+
+-- right join
+-- syntax: select column_name from table1(PK) right join table2(FK) where table1.col=table2.col;
+select stname,marks,course_name from student right join course on student.rollno=course.rollno;
+
+-- full outer join
+select stname,marks,course_name from student left join course on student.rollno=course.rollno
+union
+select stname,marks,course_name from student right join course on student.rollno=course.rollno;
+
+-- self join
+-- syntax : select col as name ,col_name from table1 t1,table t2 where table1.col=table2.col;
+
+select course_name,stname,city,marks from student s,course c where s.rollno=c.rollno;
+select c.course_name as course_nm,s.stname as stud_name,s.city,s.marks as score from student s,course c where s.rollno=c.rollno;
+
+--  cross join
+-- syntax :
+select * from  student cross join  course;
