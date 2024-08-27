@@ -49,6 +49,9 @@ select * from emp_details order by salary desc;
 -- and or not 
 select * from emp_details where salary>=30000 and city="surat" ;
 select * from emp_details where joint_dt >"2006-02-01";
+-- alter table 
+alter table employee add column dob date;
+alter table employee drop column age;
 
 -- backup import /export database
 -- C:\WINDOWS\system32>mysqldump -u root -p batch8_10 >G:\ttsbatch8_9\backup.sql
@@ -85,3 +88,100 @@ select c.course_name as course_nm,s.stname as stud_name,s.city,s.marks as score 
 --  cross join
 -- syntax :
 select * from  student cross join  course;
+
+-- function 1:
+delimiter //
+create function cub_fun(num int) returns int deterministic
+begin
+	declare total int;
+    set total=num*num*num;
+    return total;
+end //
+delimiter ;
+-- calling function
+select cub_fun(7) as cube_number;
+
+-- function 2;
+delimiter //
+create function getdob(emp_name varchar(20)) returns date deterministic
+begin
+	 declare dateOfBirth DATE;
+      select dob into dateOfBirth from employee where ename=emp_name; 
+         return dateOfBirth;
+end //
+delimiter ;
+-- call function
+select getdob("riya");
+
+-- drop function getdob;
+-- function 3 to get age from date of birth
+delimiter //
+create function getage(dob1 date) returns int deterministic
+begin 
+	declare age int;
+    declare y int;
+    select curdate() into age from employee where dob1=dob;
+    set y= year(curdate())-year(dob1);
+    return y;
+end // 
+delimiter ;
+drop function getage;
+select getage("1992-02-28");
+-- procedure syntax:
+-- DELIMITER //
+-- CREATE PROCEDURE procedure_name ( [IN|OUT|INOUT] parameter_name parameter_datatype)
+-- BEGIN
+    -- SQL statements to be executed
+-- END //
+-- DELIMITER;
+ -- To run procedure : call procedure_name(parameter);
+
+-- procedure without parameter.
+delimiter $$
+create procedure p1()
+begin
+	select * from course;
+end $$
+delimiter ;
+
+-- call procedure 
+call p1();
+
+-- procedure with in parameter.
+DELIMITER //
+CREATE PROCEDURE get_name_sal (in empid int)
+BEGIN
+		select ename,salary from employee where empid=eid;
+END //
+DELIMITER ;
+call get_name_sal(4);
+
+-- procedure with in and out parameter.
+DELIMITER //
+CREATE PROCEDURE getname (in empid int ,out emp_name varchar(25),out mob varchar(20))
+BEGIN
+    select ename as emp_name ,mob_no as mobile_no from employee where empid=eid;
+    END //
+DELIMITER ;
+
+drop procedure getname;
+
+call getname(3,@emp_name,@mob);
+
+-- procedure with in and inout parameter.
+delimiter //
+create procedure p3 (in emp_id int ,inout emp_salary int)
+begin
+	select salary into emp_salary from employee where emp_id=eid;
+    set emp_salary=emp_salary +200;
+    update employee set salary=emp_salary where emp_id=eid;
+end //
+delimiter ;
+ -- drop procedure p3;
+call p3(4,@emp_salary);
+select @emp_salary as salary;
+
+
+
+
+
