@@ -181,6 +181,42 @@ delimiter ;
 call p3(4,@emp_salary);
 select @emp_salary as salary;
 
+-- trigger syntax:
+-- delimiter //
+-- create trigger triggername
+-- after/before insert /update/delete 
+-- on tablename for each row 
+-- begin 
+	-- dml statements;
+-- end //
+-- delimiter ;
+
+-- trigger to set on insert where new city if added surat should be update to local
+delimiter //
+create trigger update_city
+before insert on student for each row 
+begin
+	if new.city="surat" then set new.city="Local";
+    end if;
+end //
+delimiter ;
+
+insert into student (rollno,stname,mobile_no,city,marks) 
+values(1,"Manoj","74258963","Surat",85),(2,"Paras","854129632","Valsad",96),(3,"Rohit","852147963","Navsari",74);
+
+create table stud_back (rollno int , stname  varchar(255),marks int);
+
+ -- trigger to add data into new table
+ delimiter //
+ create trigger add_new
+ after insert on student for each row
+ begin 
+	insert into stud_back(rollno,stname,marks)values(new.rollno,new.stname,new.marks);
+ end //
+ delimiter ;
+insert into student (rollno,stname,mobile_no,city,marks) 
+values(4,"Riya","7425896743","Vapi",75);
+
 
 
 
