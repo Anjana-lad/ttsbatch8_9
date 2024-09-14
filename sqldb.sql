@@ -138,14 +138,14 @@ select getage("1992-02-28");
 
 -- procedure without parameter.
 delimiter $$
-create procedure p1()
+create procedure p11()
 begin
-	select * from course;
+	select * from country;
 end $$
 delimiter ;
 
 -- call procedure 
-call p1();
+call p11();
 
 -- procedure with in parameter.
 DELIMITER //
@@ -154,7 +154,7 @@ BEGIN
 		select ename,salary from employee where empid=eid;
 END //
 DELIMITER ;
-call get_name_sal(4);
+call get_name_sal(3);
 
 -- procedure with in and out parameter.
 DELIMITER //
@@ -217,7 +217,17 @@ create table stud_back (rollno int , stname  varchar(255),marks int);
 insert into student (rollno,stname,mobile_no,city,marks) 
 values(4,"Riya","7425896743","Vapi",75);
 
+-- 
+insert into student (rollno,stname,mobile_no,city,marks) 
+values(5,"Tina","7425876743","navsari",75);
 
+savepoint s1;
 
+update student set marks=85 where rollno=2;
+savepoint s2;
+
+rollback to s1;
+
+commit
 
 

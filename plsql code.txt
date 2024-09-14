@@ -1,0 +1,32 @@
+1.. constant
+DECLARE 
+    pi constant number := 3.14; 
+   -- other declarations 
+   radius number(5,2):=5;  
+   dia number(5,2);
+   circumference number(7, 2); 
+   area number (10, 2); 
+BEGIN  
+   -- processing 
+   dia := radius * 2;  
+   circumference := 2.0 * PI * radius; 
+   area := pi * radius * radius; 
+   -- output 
+   dbms_output.put_line('Radius: ' || radius); 
+   dbms_output.put_line('Diameter: ' || dia); 
+   dbms_output.put_line('Circumference: ' || circumference); 
+   dbms_output.put_line('Area: ' || area); 
+END; 
+/ 
+===============================
+2.Conditional statements
+DECLARE 
+   a number(2) := 10; 
+BEGIN 
+   a:= 10; 
+    IF( a < 5 ) THEN 
+        dbms_output.put_line('a is less than 20 ' ); 
+   END IF; 
+   dbms_output.put_line('value of a is : ' || a); 
+END; 
+/
