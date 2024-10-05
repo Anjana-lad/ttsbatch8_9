@@ -231,3 +231,44 @@ rollback to s1;
 commit
 
 
+-- cursor
+delimiter //
+	create procedure emp_details()
+    begin
+    declare e_id int;
+    declare e_name varchar(25);
+    declare mob_num varchar(20);
+    declare temp int default 0;
+    
+    declare cur1 cursor for select eid,ename,mob_no from employee;
+    -- handeler for each row in the table
+    declare continue handler for not found set temp=1;
+    open cur1;
+    lable :loop
+      fetch cur1 into e_id,e_name,mob_num;
+      insert into back_up_emp (eid,ename,mob_no) values(e_id,e_name,mob_num);
+      if temp=1 then leave lable ;
+      end if;
+    end loop;
+    close cur1;
+    end //
+delimiter ;
+
+
+drop procedure emp_details;
+
+call emp_details;
+
+select * from  back_up_emp;
+
+
+
+
+
+
+
+
+
+
+
+
