@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv{
+            width: 400px;
+            border: 2px solid red;   
+            margin:50px auto;
+            overflow: hidden;
+        }
+        img{
+            width: 400px;
+            vertical-align: middle;
+            transition: 1s ease;
+        }
+        .mydiv:hover img{
+            scale: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv">
+        <img src="https://images.pexels.com/photos/1042423/pexels-photo-1042423.jpeg?cs=srgb&dl=pexels-kasperphotography-1042423.jpg&fm=jpg" alt="">
+       
+    </div>
+</body>
+</html>

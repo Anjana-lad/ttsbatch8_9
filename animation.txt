@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv{
+            height: 150px;
+            width: 150px;
+            margin:200px auto;
+            animation-name: move;
+            animation-duration: 2s;            
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        /* create an animation */
+        @keyframes move {
+            0%{
+                transform: rotate(0deg) scale(1);
+                background: linear-gradient(red 10px,green 100px);
+            }
+            20%{
+                transform: rotate(95deg);
+                background:linear-gradient(blue 20px,pink 120px);
+            }
+            100%{
+                transform: rotate(360deg) scale(1.5);
+                background: linear-gradient(red 50px,green 150px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv"></div>
+</body>
+</html>
